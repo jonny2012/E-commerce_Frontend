@@ -1,0 +1,22 @@
+@import "./styles/Variables.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+   width: 1440px;
+   margin: 0 auto;
+   position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: $T-black;
+    font-weight: 500;
+}
+*{
+    font-family: "Poppins", sans-serif;
+}
