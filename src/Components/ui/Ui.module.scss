@@ -1,7 +1,5 @@
 @import "src/styles/Variables.scss";
 
-
-
 .line {
   width: 100vw;
   height: 1px;
@@ -9,18 +7,12 @@
   opacity: 0.4;
 }
 
-
-
-
-.red_button{
+.red_button {
   background-color: $Button-red;
   padding: 16px 0;
   border-radius: 5px;
 
-  &:hover{
+  &:hover {
     background-color: $Button-red-hover;
   }
-
-
 }
-
