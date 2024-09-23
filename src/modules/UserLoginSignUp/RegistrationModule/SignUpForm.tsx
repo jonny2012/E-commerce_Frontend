@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { User, userApi } from "../../../services/UserServices";
 import styles from "../LoginSignUpForm.module.scss";
 import { Link } from "react-router-dom";
-import { RedButton } from "Components/ui/RedButton";
+import { RedButton } from "./../../../Components/ui/RedButton";
 
 export const SignUpForm = () => {
   const Userdata: Partial<User> = {
@@ -20,33 +20,33 @@ export const SignUpForm = () => {
   console.log(isError, isSuccess, isLoading, data);
 
   return (
-    <div className={styles.sign_up}>
+    <div className="sign_up">
       <h1>Create an account</h1>
       <span>Enter your details below</span>
-      <form className={styles.form}>
+      <form className="form">
         <input
-          className={styles.user_data_input}
+          className="user_data_input"
           type="text"
           name="name"
           id="name"
           placeholder="Name"
         />
         <input
-          className={styles.user_data_input}
+          className="user_data_input"
           type="email"
           name="email"
           placeholder="Email"
         />
         <input
-          className={styles.user_data_input}
+          className="user_data_input"
           type="password"
           name="password"
           placeholder="Password"
         />
       </form>
-      <div className={styles.submit_box}>
+      <div className="submit_box">
         <RedButton words={"Create Account"} width={"100%"} />
-        <div className={styles.question_box}>
+        <div className="question_box">
           <p>Already have account?</p>
           <Link style={{ color: "#DB4444" }} to={"/login"}>
             Log In

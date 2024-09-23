@@ -13,7 +13,7 @@ import { Login } from "./Pages/Login/Login"
 
     return (
         <>
-        <Header isAuth={false} />
+        <Header  />
         <Line/>
         <Routes>
          <Route path="/" element={<HomePage/>}/>

@@ -1,22 +1,21 @@
 import { FC } from "react";
 import { SearchBar } from "./Components/searchBar/SearchBar";
 import { AccountIcons } from "./Components/AccountIcons/AccountIcons";
-import styles from "./Header.module.scss";
+import  "./Header.module.scss";
 import { Navbar } from "./Components/NavBar/Navbar";
+import styles from "./Header.module.scss"
 
-interface IUser {
-  isAuth: boolean;
-}
 
-const Header: FC<IUser> = ({ isAuth }) => {
+
+const Header = () => {
   return (
-    <section className={styles.header}>
-      <div className={styles.container}>
+    <section >
+      <div className="container">
         <h2>Exclusive</h2>
         <Navbar />
-        <div className={styles.right}>
+        <div className="right">
           <SearchBar />
-          {isAuth ?<AccountIcons />:null}
+          {<AccountIcons />}
         </div>
       </div>
     </section>

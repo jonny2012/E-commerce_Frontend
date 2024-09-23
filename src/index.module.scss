@@ -5,12 +5,15 @@
     padding: 0;
     box-sizing: border-box;
     image-rendering: optimizeQuality;
+    font-family: "Poppins", sans-serif;
 }
+
 
 .App{
    margin: 0 auto;
    position: relative;
 }
+
 input {
     &:focus{
         outline: none;
@@ -22,15 +25,10 @@ input {
 
 a{
     text-decoration: none;
-    color: $T-black;
     font-weight: 500;
-    &:hover{
-        text-decoration: underline;
-    }
+
 }
-*{
-    font-family: "Poppins", sans-serif;
-}
+
 
 button{
     cursor: pointer;

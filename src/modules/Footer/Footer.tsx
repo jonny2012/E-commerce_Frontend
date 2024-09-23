@@ -8,8 +8,8 @@ import { DownloadColumn } from "./Components/DownloadColumn/DownloadColumn";
 
 const Footer = () => {
   return (
-    <section className={styles.footer}>
-      <div className={styles.container}>
+    <section className="footer">
+      <div className="container">
      <DiscountColumn/>
 <ContactsColumn/>
    <AccountColumn/>

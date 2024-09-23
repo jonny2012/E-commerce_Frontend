@@ -10,7 +10,7 @@ interface IButonText{
  export const RedButton:FC<IButonText> = ({words, width})=>{
 
     return (
-        <button style={{width: width, color:"#fff"}} className={styles.red_button}>
+        <button style={{width: width, color:"#fff"}} className="red_button">
         {words}
         </button>
     )

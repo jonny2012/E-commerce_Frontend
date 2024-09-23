@@ -3,7 +3,7 @@
 .header {
   display: flex;
   justify-content: center;
-}
+
 .container {
   width: 1170px;
   height: 40px;
@@ -11,7 +11,7 @@
   justify-content: space-between;
   margin: 40px 135px 12px 135px;
   align-items: center;
-
+}}
   .navbar {
     width: 370px;
     height: 40px;
@@ -26,7 +26,7 @@
     align-items: center;
     gap: 16px;
   }
-}
+
 
 .top-header {
   width: 100%;

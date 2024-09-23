@@ -19,9 +19,9 @@ const [result, setResult]= useState("")
  console.log(data)
 
     return (
-        <section className={styles.loginContainer} >
-          <div className={styles.login}>
-          <img className={styles.img} src={LoginImg} alt="login-image" />
+        <section className={styles.loginContainer}>
+          <div className="login">
+          <img className="img" src={LoginImg} alt="login-image" />
           <LoginForm/>  
           </div>
         </section>
