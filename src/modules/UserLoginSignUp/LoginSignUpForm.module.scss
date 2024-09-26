@@ -1,4 +1,4 @@
-@import "src/styles/Variables.scss";
+@import "./../../styles/Variables.scss";
 
 .sign_up {
   width: 370px;
@@ -12,7 +12,7 @@
     gap: 24px;
 
     .user_data_input {
-      height: 40px;
+      height: 50px;
       border: none;
       border-bottom: 1px solid $T-gray;
       font-size: 18px;
@@ -22,6 +22,20 @@
     &::placeholder {
       color: $T-gray;
     }
+  }
+}
+.error_message{
+  color: $Button-red;
+}
+
+.red_button {
+  background-color: $Button-red;
+  padding: 16px 0;
+  border-radius: 5px;
+  color: $T-white;
+
+  &:hover {
+    background-color: $Button-red-hover;
   }
 }
 

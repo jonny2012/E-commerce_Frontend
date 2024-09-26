@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES5",
     "lib": [
       "dom",
       "dom.iterable",
@@ -13,20 +13,34 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "ES6",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "noEmit": false,
     "jsx": "react-jsx",
-    "baseUrl": "src",
+    "baseUrl": "src/",
     "paths": {
-      "@assets/*": ["assets/*"],
-      
-    }
-
-  },
-  "include": ["src"]
+        "components/*":["Components/*"],
+        "modules/*": ["modules/*"],
+        "pages/*": ["Pages/*"]
+    },
   
- 
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "modules": {
+            "mode": "local",
+            "localIdentName": "[hash:base64:5]"
+          }
+        }
+      }
+    ]
+  },
+  "include": [
+    "src"
+
+, ],
+"exclude": ["node_modules", "dist"]
 }

@@ -1,8 +1,8 @@
-import styles from "./Ui.module.scss"
+import style from "./Ui.module.scss"
 
 export const Line = ()=>{
 
     return (
-        <hr className={styles.line}></hr>
+        <hr className={style.lineInc}></hr>
     )
 }

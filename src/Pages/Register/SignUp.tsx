@@ -6,7 +6,7 @@ export const SignUp = () => {
   return (
     <section className={styles.signupContainer}>
       <div className={styles.signup}>
-        <img src={LoginImg} alt="" />
+        {/* <img src={LoginImg} alt="login-img" /> */}
         <SignUpForm />
       </div>
     </section>

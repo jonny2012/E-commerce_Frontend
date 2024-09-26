@@ -1,23 +1,31 @@
-@import "./../../styles/Variables.scss";
+ @import "./../../styles/Variables.scss"; 
 
-.header {
+ .header {
   display: flex;
   justify-content: center;
+
 }
-.container {
+.container_header {
   width: 1170px;
   height: 40px;
   display: flex;
   justify-content: space-between;
   margin: 40px 135px 12px 135px;
   align-items: center;
-
+}
   .navbar {
     width: 370px;
     height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &.link{
+      text-decoration: none;
+      font-size: 16px;
+      &:hover{
+        text-decoration: line-through;
+      }
+    }
   }
   .right {
     display: flex;
@@ -26,7 +34,7 @@
     align-items: center;
     gap: 16px;
   }
-}
+
 
 .top-header {
   width: 100%;
@@ -38,16 +46,17 @@
   }
 }
 
-.searchBox {
+.search-box {
   max-width: 245px;
   width: 100%;
   display: flex;
-
+  padding-right: 12px;
+}
   .search {
     width: 100%;
     border: none;
     background-color: $Second;
-    padding: 7px 0 7px 20px;
+    padding: 7px 12px 7px 20px;
     font-size: 16px;
     border: 4px;
     border-top-left-radius: 4px;
@@ -61,23 +70,25 @@
     &::placeholder {
       font-size: 12px;
     }
+  
+} 
+.button-search {
+  border: none;
+  background-color: $Second;
+  padding: 7px 12px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: $BG-primary-white;
+
+  &:hover {
+    background-color: $Button-red;
   }
 
-  .button {
-    border: none;
-    background-color: $Second;
-    padding: 7px 20px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    color: $BG-primary-black;
-
-    &:hover {
-      background-color: $Button-red;
-    }
-
-    &:active {
-      background-color: $Button-red-hover;
-      color: $BG-primary-white;
-    }
+  &:active {
+    background-color: $Button-red-hover;
+    color: $BG-primary-white;
+  }
+  .img-search path{
+    fill: currentColor;
   }
 }

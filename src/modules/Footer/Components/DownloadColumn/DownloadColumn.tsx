@@ -8,11 +8,11 @@ export const DownloadColumn = () => {
   return (
     <div className={styles.content}>
       <h3>Download App</h3>
-      <Link className={styles.white_link} to="/register">
+      <Link className={styles.whiteLink}to="/register">
         Save $3 with App New User Only
       </Link>
-      <div className={styles.store_box}>
-        <Link to="/" className={styles.white_link}>
+      <div className={styles.storeBox}>
+        <Link to="/" className={styles.whiteLink}>
           <img src={qrcode} alt="qrcode" />
         </Link>
         <div className={styles.stores}>
@@ -23,7 +23,7 @@ export const DownloadColumn = () => {
           ))}
         </div>
       </div>
-      <div className={styles.social_links}>
+      <div className={styles.socialLinks}>
         {socialLinks.map((link) => (
           <Link key={link.src} to={link.to}>
             <img src={link.src} alt={link.alt} />
