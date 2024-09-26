@@ -6,16 +6,16 @@ import { socialLinks } from "modules/Footer/constants/iconsData";
 
 export const DownloadColumn = () => {
   return (
-    <div className="content">
+    <div className={styles.content}>
       <h3>Download App</h3>
-      <Link className="white_link" to="/register">
+      <Link className={styles.whiteLink}to="/register">
         Save $3 with App New User Only
       </Link>
-      <div className="store_box">
-        <Link to="/" className="white_link">
+      <div className={styles.storeBox}>
+        <Link to="/" className={styles.whiteLink}>
           <img src={qrcode} alt="qrcode" />
         </Link>
-        <div className="stores">
+        <div className={styles.stores}>
           {appStores.map((store: any) => (
             <Link key={store.src} to={store.to}>
               <img src={store.src} alt={store.alt} />
@@ -23,7 +23,7 @@ export const DownloadColumn = () => {
           ))}
         </div>
       </div>
-      <div className="social_links">
+      <div className={styles.socialLinks}>
         {socialLinks.map((link) => (
           <Link key={link.src} to={link.to}>
             <img src={link.src} alt={link.alt} />

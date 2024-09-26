@@ -4,9 +4,9 @@ import styles from "./SignUp.module.scss";
 
 export const SignUp = () => {
   return (
-    <section className="signupContainer">
-      <div className="SignUp">
-        <img src={LoginImg} alt="" />
+    <section className={styles.signupContainer}>
+      <div className={styles.signup}>
+        {/* <img src={LoginImg} alt="login-img" /> */}
         <SignUpForm />
       </div>
     </section>

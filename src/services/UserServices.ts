@@ -15,7 +15,7 @@ export const userApi = createApi({
     reducerPath: "userAPI",
     baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/api" }),
     endpoints: (build) => ({
-        getLoginUser: build.query<User, Partial<User>>({
+        getLoginUser: build.mutation<User, Partial<User>>({
             query: (body) => ({
                 url: "/user/login",
                 method: "POST",

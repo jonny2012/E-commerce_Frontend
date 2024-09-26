@@ -5,15 +5,16 @@ import  "./Header.module.scss";
 import { Navbar } from "./Components/NavBar/Navbar";
 import styles from "./Header.module.scss"
 
-
-
 const Header = () => {
+
+  
+  console.log(styles)
   return (
-    <section >
-      <div className="container">
+    <section className={styles.header} >
+      <div className={styles.containerHeader}>
         <h2>Exclusive</h2>
         <Navbar />
-        <div className="right">
+        <div className={styles.right}>
           <SearchBar />
           {<AccountIcons />}
         </div>

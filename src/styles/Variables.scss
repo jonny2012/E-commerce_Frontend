@@ -8,3 +8,42 @@ $Button-green: #47B486;
 $Button-red: #DB4444;
 $Button-red-hover:#E07575;
 $Button-blue-hover: #A0BCE0;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    image-rendering: optimizeQuality;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.App{
+   margin: 0 auto;
+   position: relative;
+}
+
+input {
+    &:focus{
+        outline: none;
+    }
+    &:focus::placeholder{
+        color: transparent;
+    }
+}
+
+a{
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+
+button{
+    cursor: pointer;
+    border: none;
+}
+h1{
+    font-size: 36px;
+}

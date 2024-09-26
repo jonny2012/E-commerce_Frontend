@@ -2,18 +2,18 @@ import styles from "./../../Footer.module.scss";
 
 export const QuickLinksColumn = () => {
   return (
-    <div className="content">
+    <div className={styles.content}>
       <h3>Quick Link</h3>
-      <a href="#" className="white_link">
+      <a href="#" className={styles.whiteLink}>
         <span>Privacy Policy</span>
       </a>
-      <a href="#" className="white_link">
+      <a href="#" className={styles.whiteLink}>
         <span>Terms Of Use</span>
       </a>
-      <a href="#" className="white_link">
+      <a href="#" className={styles.whiteLink}>
         <span>FAQ</span>
       </a>
-      <a href="#" className="white_link">
+      <a href="#" className={styles.whiteLink}>
         <span>Contact</span>
       </a>
     </div>

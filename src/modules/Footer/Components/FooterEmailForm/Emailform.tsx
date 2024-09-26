@@ -3,13 +3,13 @@ import styles from "./EmailForm.module.scss";
 
 export const Emailform = () => {
   return (
-    <div className="email_form">
+    <div className={styles.emailForm}>
       <input
         type="email"
-        className="input"
+        className={styles.input}
         placeholder="Enter your email"
       />
-      <button className="button_send">
+      <button className={styles.buttonSend}>
         <img src={sendIcon} alt="send-icon" />
       </button>
     </div>

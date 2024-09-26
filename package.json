@@ -20,15 +20,13 @@
     "react-scripts": "^5.0.1",
     "redux-thunk": "^3.1.0",
     "typed-scss-modules": "^8.0.1",
-    "typescript-plugin-css-modules": "^5.1.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "webpack serve ",
-    "build": "webpack --config webpack.config.ts",
+    "start": "webpack serve --mode development --open ",
+    "build": "webpack --config webpack.config.ts  ",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "scss": " npx typed-scss-modules src  --nameFormat dashes  --watch"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -59,7 +57,7 @@
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2",
-    "typings-for-css-modules-loader": "^0.1.1",
+    "typescript-plugin-css-modules": "^5.1.0",
     "webpack": "^5.94.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
