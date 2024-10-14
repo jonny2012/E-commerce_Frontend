@@ -1,25 +1,41 @@
-const  path = require ('path');
-const HtmlWebpackPlugin =  require( 'html-webpack-plugin');
-const  MiniCssExtractPlugin = require( 'mini-css-extract-plugin');
+
+
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
+  cache: true,
   mode: "development",
   entry: "./src/index.tsx",
-  devtool: "inline-source-map",
   resolve: {
- 
-      alias: {
-        components: path.resolve(__dirname, './src/components'),
-        modules: path.resolve(__dirname, './src/modules'),
-        pages: path.resolve(__dirname, './src/Pages')
+
+    alias: {
+      components: path.resolve(__dirname, './src/components'),
+      modules: path.resolve(__dirname, './src/modules'),
+      pages: path.resolve(__dirname, './src/Pages'),
+      assets: path.resolve(__dirname, './src/assets'),
     },
-    extensions: [".js", ".jsx", ".ts", ".tsx"], // add other extensions if needed
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".scss"], // add other extensions if needed
   },
   output: {
     filename: "bundle.js",
     path: __dirname + "/build",
     clean: true,
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+      
+        styles: {
+          name: "styles",
+          type: "css/mini-extract",
+          chunks: "all",
+          enforce: true,
+        },
+      },
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -30,10 +46,20 @@ module.exports = {
       chunkFilename: "css[name].css",
     }),
   ],
+  target:"web",
   devServer: {
     port: 3333,
     open: true,
-    historyApiFallback:true
+    compress: true,
+    watchFiles: ["src/*", "public/*"],
+    liveReload: false,
+    hot:true,
+    historyApiFallback: true
+  },
+  watchOptions: {
+    ignored: "/node_modules/",
+    aggregateTimeout: 600,
+    poll: 1000, // Check for changes every second
   },
   module: {
     rules: [
@@ -52,20 +78,24 @@ module.exports = {
       {
         test: /\.module\.(scss)$/, // For CSS/SCSS modules (only files with .module.scss or .module.sass)
         use: [
-         MiniCssExtractPlugin.loader,
+          "style-loader",
           {
             loader: 'css-loader',
             options: {
-              esModule:false,
-              sourceMap:false,
-              exportType:"array",
-              modules:{
-                localIdentName: '[hash:base64:5]', // Naming convention for CSS modules
-              
+              esModule: false,
+              sourceMap: false,
+              exportType: "array",
+              modules: {
+                localIdentName: '[hash:base64:5]', // Naming  for CSS modules
+
               }
             },
           },
-          {loader:'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              api: "modern-compiler"
+            }
           }, // Use Sass (SCSS)
         ],
       },
@@ -73,24 +103,36 @@ module.exports = {
         test: /\.scss$/, // Match global SCSS files (non-modules)
         exclude: /\.module\.scss$/, // Exclude module files to prevent conflict
         use: [
-          MiniCssExtractPlugin.loader, // Extract CSS into separate files
+          "style-loader", 
           'css-loader', // Translates CSS into CommonJS
           'sass-loader', // Compile SCSS to CSS
         ],
       },
       {
         test: /\.css?$/,
-        use:["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"]
       },
 
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        type: "asset/resource",
+        test: /\.(png|jpe?g|gif)$/i,
+        type: "asset",
+       use: {
+          loader: 'image-webpack-loader',
+          options: {
+            bypassOnDebug: true, // webpack@1.x
+            disable: true, // webpack@2.x and newer
+          },
+        },
       },
 
       {
-        test: /\\.(png|jp(e*)g|svg|gif)$/,
-        use: ["@svgr/webpack", "file-loader"],
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
+        use: [{
+          loader: '@svgr/webpack',
+
+        }],
       },
     ],
   },

@@ -1,16 +1,16 @@
-import { icons } from "modules/Header/constants/svgIcons";
+import {  icons } from "modules/Header/constants/svgIcons";
 import { Link } from "react-router-dom";
+import   Wishlist from "assets/header_icons/Wishlist.svg"
+import CartIcon from "assets/header_icons/Cart=Off.svg"
+import ProfileIcon from "assets/header_icons/user.svg"
 
 export const AccountIcons = () => {
   
   return (
     <>
-      {icons &&
-        icons.map((icon) => (
-          <Link key={icon.src} to={icon.to}>
-            <img src={icon.src} alt={icon.alt} />
-          </Link>
-        ))}
+   <Link to={"/wishlist"}> <Wishlist/></Link>
+   <Link to={"/basket"}> <CartIcon/></Link>
+   <Link to={"/profile"}> <ProfileIcon/></Link>
     </>
   );
 };

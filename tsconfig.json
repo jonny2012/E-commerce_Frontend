@@ -21,9 +21,11 @@
     "jsx": "react-jsx",
     "baseUrl": "src/",
     "paths": {
-        "components/*":["Components/*"],
+        "components/*":["components/*"],
         "modules/*": ["modules/*"],
-        "pages/*": ["Pages/*"]
+        "pages/*": ["Pages/*"],
+        "assets/*": ["assets/*"],
+
     },
   
     "plugins": [
@@ -41,6 +43,6 @@
   "include": [
     "src"
 
-, ],
-"exclude": ["node_modules", "dist"]
+ ],
+"exclude": ["node_modules", "dist",]
 }

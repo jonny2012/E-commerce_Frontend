@@ -1,8 +1,9 @@
 import style from "./Ui.module.scss"
 
-export const Line = ()=>{
+ const Line = ()=>{
 
     return (
         <hr className={style.lineInc}></hr>
     )
 }
+export default Line

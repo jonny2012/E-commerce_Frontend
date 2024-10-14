@@ -30,7 +30,8 @@
       color: $T-white;
 
       &:hover {
-        text-decoration: underline;
+        text-decoration:underline;
+        color: $Button-red-hover;
       }
     }
 
@@ -48,6 +49,26 @@
     .social_links {
       display: flex;
       gap: 24px;
+
     }
+
   }
+
 }
+.svg {
+  stroke: white;
+
+  &:hover{
+    stroke: $Button-red-hover;
+  }
+ 
+}
+.svg_t * {
+  fill: white;
+
+  &:hover{
+    fill: $Button-red-hover;
+  }
+ 
+}
+

@@ -1,0 +1,33 @@
+
+
+.product_card{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &:hover{
+    transform: scale(1.1);
+    transition: 0.3s all;
+       box-shadow:  -3px 5px 41px -3px #000000
+
+
+    }
+
+    .card_image_box{
+        max-width: 270px;
+        height:auto;
+        margin-bottom: 8px;
+     
+        .card_image{
+            width: 100%;
+   
+            image-rendering:inherit;
+        
+        }
+    }
+    .card_price_box{
+        display: flex;
+        gap: 15px;
+    }
+}

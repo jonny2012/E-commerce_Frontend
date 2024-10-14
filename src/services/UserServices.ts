@@ -8,8 +8,6 @@ export interface User {
     password: string
 }
 
-type UserResponse = User[]
-
 
 export const userApi = createApi({
     reducerPath: "userAPI",

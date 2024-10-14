@@ -1,4 +1,4 @@
-import sendIcon from "./../../../../assets/footer_icons/icon-send-black.svg";
+import SendIcon from "./../../../../assets/footer_icons/icon-send-black.svg";
 import styles from "./EmailForm.module.scss";
 
 export const Emailform = () => {
@@ -10,7 +10,7 @@ export const Emailform = () => {
         placeholder="Enter your email"
       />
       <button className={styles.buttonSend}>
-        <img src={sendIcon} alt="send-icon" />
+       <SendIcon/>
       </button>
     </div>
   );

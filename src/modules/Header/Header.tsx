@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { SearchBar } from "./Components/searchBar/SearchBar";
 import { AccountIcons } from "./Components/AccountIcons/AccountIcons";
 import  "./Header.module.scss";

@@ -1,8 +1,12 @@
 import styles from "./../../Footer.module.scss";
 import { Link } from "react-router-dom";
-import { appStores } from "modules/Footer/constants/iconsData";
-import qrcode from "./../../../../assets/footer_icons/Qr Code.svg";
-import { socialLinks } from "modules/Footer/constants/iconsData";
+import Qrcode from "assets/footer_icons/Qr Code.svg";
+import GooglePlay from "assets/footer_icons/GooglePlay.svg";
+import AppStore from "assets/footer_icons/AppStore.svg"
+import Facebook from "assets/footer_icons/Icon-Facebook.svg";
+import Twitter from "assets/footer_icons/Icon-Twitter.svg";
+import Instagram from "assets/footer_icons/icon-instagram.svg";
+import Linkedin from "assets/footer_icons/Icon-Linkedin.svg";
 
 export const DownloadColumn = () => {
   return (
@@ -13,22 +17,33 @@ export const DownloadColumn = () => {
       </Link>
       <div className={styles.storeBox}>
         <Link to="/" className={styles.whiteLink}>
-          <img src={qrcode} alt="qrcode" />
+          < Qrcode/>
         </Link>
         <div className={styles.stores}>
-          {appStores.map((store: any) => (
-            <Link key={store.src} to={store.to}>
-              <img src={store.src} alt={store.alt} />
+            <Link  to={"https://play.google.com/"}>
+              <GooglePlay />
             </Link>
-          ))}
+            <Link  to={"https://www.apple.com/de/app-store/"}>
+              <AppStore />
+            </Link>
+       
         </div>
+        
       </div>
       <div className={styles.socialLinks}>
-        {socialLinks.map((link) => (
-          <Link key={link.src} to={link.to}>
-            <img src={link.src} alt={link.alt} />
+          <Link   to={"https://www.facebook.com/"}>
+            <Facebook className={styles.svg}/>
           </Link>
-        ))}
+          <Link   to={"https://www.twitter.com/"}>
+            <Twitter className={styles.svgT}/>
+          </Link>
+          <Link   to={"https://www.instagram.com/"}>
+            <Instagram className={styles.svg}/>
+          </Link>
+          <Link    to={"https://www.linkedin.com/"}>
+            <Linkedin className={styles.svg}/>
+          </Link>
+  
       </div>
     </div>
   );
