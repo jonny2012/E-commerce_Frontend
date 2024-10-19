@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import AppleIcon from "./../../assets/Apple_gray.svg"
-import ArrowRight from "assets/icons arrow-right.svg"
+import ArrowRight from "assets/arrow-right.svg"
 import IPhoneImage from "assets/iphone-img.jpg"
 import styles from "./slider.module.scss"
 

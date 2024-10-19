@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { categoryList } from "./constants";
-import styles from "./categories.module.scss";
+import styles from "./categoriesMenu.module.scss";
 
-export const Categories = () => {
+export const CategoriesMenu = () => {
   return (
     <div className={styles.categories}>
       <ul className={styles.list}>

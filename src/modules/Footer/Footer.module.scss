@@ -1,17 +1,16 @@
 @import "./../../styles/Variables.scss";
 
 .footer {
-  width: 100vw;
+  width: 98vw;
   padding: 60px 0;
   background-color: $BG-primary-black;
   display: flex;
   justify-content: center;
   align-items: center;
 
-
   .container {
     width: 1170px;
-    height: 240px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,7 +29,7 @@
       color: $T-white;
 
       &:hover {
-        text-decoration:underline;
+        text-decoration: underline;
         color: $Button-red-hover;
       }
     }
@@ -39,6 +38,7 @@
       display: flex;
       flex-direction: row;
       gap: 10px;
+      margin-left: -30px;
 
       .stores {
         display: flex;
@@ -49,26 +49,20 @@
     .social_links {
       display: flex;
       gap: 24px;
-
     }
-
   }
-
 }
 .svg {
   stroke: white;
 
-  &:hover{
+  &:hover {
     stroke: $Button-red-hover;
   }
- 
 }
 .svg_t * {
   fill: white;
 
-  &:hover{
+  &:hover {
     fill: $Button-red-hover;
   }
- 
 }
-

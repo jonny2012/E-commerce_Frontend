@@ -6,9 +6,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
-  cache: true,
+  cache: false,
   mode: "development",
   entry: "./src/index.tsx",
+
   resolve: {
 
     alias: {
