@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
-  cache: false,
+  cache: true,
   mode: "development",
   entry: "./src/index.tsx",
 
@@ -28,7 +28,7 @@ module.exports = {
   optimization: {
     splitChunks: {
       cacheGroups: {
-      
+
         styles: {
           name: "styles",
           type: "css/mini-extract",
@@ -47,14 +47,14 @@ module.exports = {
       chunkFilename: "css[name].css",
     }),
   ],
-  target:"web",
+  target: "web",
   devServer: {
     port: 3333,
     open: true,
     compress: true,
     watchFiles: ["src/*", "public/*"],
     liveReload: false,
-    hot:true,
+    hot: true,
     historyApiFallback: true
   },
   watchOptions: {
@@ -104,7 +104,7 @@ module.exports = {
         test: /\.scss$/, // Match global SCSS files (non-modules)
         exclude: /\.module\.scss$/, // Exclude module files to prevent conflict
         use: [
-          "style-loader", 
+          "style-loader",
           'css-loader', // Translates CSS into CommonJS
           'sass-loader', // Compile SCSS to CSS
         ],
@@ -117,7 +117,7 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif)$/i,
         type: "asset",
-       use: {
+        use: {
           loader: 'image-webpack-loader',
           options: {
             bypassOnDebug: true, // webpack@1.x
