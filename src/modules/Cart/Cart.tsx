@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { CartProduct } from "./CartProduct";
 import { Link } from "react-router-dom";
 import { RedButton } from "components/ui/RedButton";
-import Line from "components/ui/Line";
+import { CheckoutBox } from "./CheckoutBox";
 
 export const Cart = () => {
   const [subTotal, setSubTotal] = useState<number>(0);
@@ -63,24 +63,7 @@ export const Cart = () => {
             onClick={handleApplyCoupon}
           />
         </div>
-        <div className={styles.cartTotal}>
-          <h3>Cart Total</h3>
-          <div className={styles.flexBetween}>
-            <span>Subtotal:</span>
-            <span>{`$${subTotal}`}</span>
-          </div>
-          <Line />
-          <div className={styles.flexBetween}>
-            <span>Shipping:</span>
-            <span>Free</span>
-          </div>
-          <Line />
-          <div className={styles.flexBetween}>
-            <span>Total:</span>
-            <span>{`$${subTotal}`}</span>
-          </div>
-          <Line />
-        </div>
+        <CheckoutBox subTotal={subTotal} />
       </section>
     </section>
   );
