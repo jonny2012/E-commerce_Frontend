@@ -11,7 +11,7 @@ export interface ICard {
   reviews: number;
 }
 
-const ProductCard: FC<ICard> = ({
+export const ProductCard: FC<ICard> = ({
   img,
   price,
   discountPrice,
@@ -43,5 +43,3 @@ const ProductCard: FC<ICard> = ({
     </div>
   );
 };
-
-export default ProductCard;

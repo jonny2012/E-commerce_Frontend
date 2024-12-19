@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import { Footer } from "./modules/Footer/Footer";
 import { Header } from "./modules/Header/Header";
-import Line from "./components/ui/Line";
-import { HomePage } from "./pages/homePage/HomePage";
-import { SignUp } from "./pages/Register/SignUp";
-import { Login } from "./pages/Login/Login";
-import { Contact } from "./pages/contactPage/Contact";
+import { Line } from "./Components/ui/Line";
+import { HomePage } from "./Pages/HomePage/HomePage";
+import { SignUp } from "./Pages/Register/SignUp";
+import { Login } from "./Pages/Login/Login";
+import { Contact } from "./Pages/contactPage/Contact";
 import { Cart } from "modules/Cart/Cart";
 
 export const AppRouter = () => {

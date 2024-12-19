@@ -3,7 +3,7 @@ import styles from "./cart.module.scss";
 import { useState, useEffect } from "react";
 import { CartProduct } from "./CartProduct";
 import { Link } from "react-router-dom";
-import { RedButton } from "components/ui/RedButton";
+import { RedButton } from "Components/ui/RedButton";
 import { CheckoutBox } from "./CheckoutBox";
 
 export const Cart = () => {

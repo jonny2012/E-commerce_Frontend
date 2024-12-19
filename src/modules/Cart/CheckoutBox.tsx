@@ -1,5 +1,5 @@
 import styles from "./cart.module.scss";
-import Line from "components/ui/Line";
+import { Line } from "Components/ui/Line";
 
 interface Props {
   subTotal: number;

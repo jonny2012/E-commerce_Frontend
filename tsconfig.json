@@ -21,13 +21,19 @@
     "jsx": "react-jsx",
     "baseUrl": "src/",
     "paths": {
-        "components/*":["components/*"],
-        "modules/*": ["modules/*"],
-        "pages/*": ["Pages/*"],
-        "assets/*": ["assets/*"],
-
+      "Components/*": [
+        "Components/*"
+      ],
+      "modules/*": [
+        "modules/*"
+      ],
+      "pages/*": [
+        "Pages/*"
+      ],
+      "assets/*": [
+        "assets/*"
+      ],
     },
-  
     "plugins": [
       {
         "name": "typescript-plugin-css-modules",
@@ -41,8 +47,11 @@
     ]
   },
   "include": [
-    "src"
-
- ],
-"exclude": ["node_modules", "dist",]
+    "src",
+    "typing.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
 }

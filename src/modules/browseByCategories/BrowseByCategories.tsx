@@ -1,10 +1,8 @@
-import RedTitle from "components/ui/RedTitle";
+import { RedTitle } from "Components/ui/RedTitle";
 import { Categories } from "./components/categories";
 import styles from "./browseByCategory.module.scss";
 import LeftArrow from "assets/arrow-left.svg";
-import RightArrow from "assets/arrow-right.svg"
-
-
+import RightArrow from "assets/arrow-right.svg";
 
 export const BrowseByCategories = () => {
   return (
@@ -18,7 +16,7 @@ export const BrowseByCategories = () => {
               <LeftArrow />
             </div>
             <div className={styles.circle}>
-           <RightArrow/>
+              <RightArrow />
             </div>
           </div>
         </div>

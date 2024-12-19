@@ -1,10 +1,10 @@
-import ProductCard from "components/ProductCard/ProductCard";
-import RedTitle from "components/ui/RedTitle";
+import { ProductCard } from "Components/ProductCard/ProductCard";
+import { RedTitle } from "Components/ui/RedTitle";
 import { products } from "./constants";
 import styles from "./flashSales.module.scss";
 import { useState } from "react";
-import { RedButton } from "components/ui/RedButton";
-import Line from "components/ui/Line";
+import { Line } from "Components/ui/Line";
+import { RedButton } from "Components/ui/RedButton";
 
 export const FlashSales = () => {
   const [isShowAll, setIsShowAll] = useState(false);

@@ -1,9 +1,9 @@
-import ProductCard from "components/ProductCard/ProductCard";
-import RedTitle from "components/ui/RedTitle";
+import { ProductCard } from "Components/ProductCard/ProductCard";
+import { RedTitle } from "Components/ui/RedTitle";
 import { products } from "./constants";
 import styles from "./bestProducts.module.scss";
 import { useState } from "react";
-import { RedButton } from "components/ui/RedButton";
+import { RedButton } from "Components/ui/RedButton";
 
 export const BestProducts = () => {
   const [isShowAll, setIsShowAll] = useState(false);
